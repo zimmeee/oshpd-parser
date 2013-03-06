@@ -1,8 +1,10 @@
+Background
+==========
 The purpose of this code is to compile ~3,000 excel spreadsheets into a single dataset. 
 
 The files can be found at: http://www.oshpd.ca.gov/chargemaster/. Press the search button without supplying any arguments and it will return 6392 documents. Download ALL of the XLS and XLSX files - you may want to use a download manager like the good Firefox plug-in DownloadThemAll to help. Pick out the files that contain the ChargeMaster price list. I've included a script that I wrote to help me pick these out (FileChecker.py), but it may not be perfect. It is probably a reasonable starting place. 
 
-Now you have all of the CDM files (~3220) in their own directory. The task is to compile these into a single cohesive dataset. The hard part, and the reason that it has proved difficult to automate, is that there is absolutely no standardized format. 
+Now you have all of the CDM files (~3220) in their own directory. The task is to compile these into a single cohesive dataset. The hard part, and the reason that it has proved difficult to automate, is that there is no standardized format. Each hospital has come up with its own!
 
 There are 3 main challenges:
 ----------------------------
@@ -18,7 +20,6 @@ There are 3 main challenges:
 2. The Excel spreadsheets frequently have multiple tabs, macros and may be encrypted. Therefore the conversion to from XLS to CSV is lossy and problematic. This can be seen in the large number of .CSV files with small sizes (~4kb) after conversion.
 
 3. The files frequently have CSV formats that are formatted for human consumption, and contain sub-lists and sub-headers. For instance line 5 below represents a grouping which can be ignored for our purposes
-
 ```
 1: Evaluation & Management Services	2010 CPT Code	Outpatient Charge Amount
 2: Emergency Room Visit, Level 2 	99282	806.00
