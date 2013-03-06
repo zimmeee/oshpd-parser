@@ -1,13 +1,7 @@
-# zimmen@insight~/Documents/Projects/Healthcare/ChargeMaster/src> python FileParser.py 
-# /Users/zimmen/Documents/Projects/Healthcare/ChargeMaster/data/CDM/test/106190315_CDM_2008.csv
-# ['CDM', 'CHARGE DESCRIPTION', '  PRIOR PRICE', 'CUR PRICE']
-# /Users/zimmen/Documents/Projects/Healthcare/ChargeMaster/data/CDM/test/106190323_CDM_2008.csv
-# ['Charge#', 'Charge Description', 'HCPCS Code', 'June 2008 Price']
-# ['CHARGE CODE', 'DESCRIPTION', 'CHARGE AMOUNT']
-# ['Procedure #', 'Description', 'Charge']
-#
-# # /Users/zimmen/Documents/Projects/Healthcare/ChargeMaster/data/CDM/test/106564121_CDM_All_2009.csv
-# /Users/zimmen/Documents/Projects/Healthcare/ChargeMaster/data/CDM/test/106301098_CDM_All_2007.csv
+# 
+# This is a starter for file parsing. At the time of writing
+# this only tries to pick out the headers
+# 
 
 import csv
 import glob
@@ -15,6 +9,14 @@ import glob
 def nonEmptyEntries( row ):
 	return len( [x for x in row if x] )
 
+# Naive algorithm for finding the header:
+# Get the number of columns in the last line of the file
+# and treat this as the number of data columns, N
+# (assumption that this is a line of data, not comments)
+# 
+# Loop through line by line and return the first line 
+# containing N non-empty elements
+#
 def extractHeader( reader ):
 	headers = []
 
