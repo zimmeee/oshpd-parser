@@ -30,7 +30,9 @@ There are 3 main challenges:
 7: Comprehensive Metabolic Panel	80053	221.00
 ```
 
+----------------
 
 Dependencies:
 xls2csv.py requires the xlrd package
+
 `` easy_install xlrd ``
