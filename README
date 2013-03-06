@@ -1,0 +1,5 @@
+I need ~3,000 excel spreadsheets compiled into a single dataset. 
+
+The files can be found at: http://www.oshpd.ca.gov/chargemaster/. Press the search button without supplying any arguments and it will return 6392 documents. Download ALL of the XLS and XLSX files - you may want to use a download manager like the good Firefox plug-in DownloadThemAll to help. Pick out the files that contain the ChargeMaster price list. I've included a script that I wrote to help me pick these out (FileChecker.py), but it may not be perfect. It is probably a reasonable starting place. 
+
+Now you have all of the CDM files (~3220) in their own directory. The task is to compile these into a single cohesive dataset. The hard part, and the reason that it has proved difficult to automate, is that there is absolutely no 
