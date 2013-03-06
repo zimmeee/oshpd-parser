@@ -4,14 +4,17 @@ The files can be found at: http://www.oshpd.ca.gov/chargemaster/. Press the sear
 
 Now you have all of the CDM files (~3220) in their own directory. The task is to compile these into a single cohesive dataset. The hard part, and the reason that it has proved difficult to automate, is that there is absolutely no standardized format. 
 
-There are 3 main problems:
---------------------------
+There are 3 main challenges:
+----------------------------
 
 1. The column names are not standardized. For example:
 
 ['CDM', 'CHARGE DESCRIPTION', '  PRIOR PRICE', 'CUR PRICE']
+
 ['Charge#', 'Charge Description', 'HCPCS Code', 'June 2008 Price']
+
 ['CHARGE CODE', 'DESCRIPTION', 'CHARGE AMOUNT']
+
 ['Procedure #', 'Description', 'Charge']
 
 2. The Excel spreadsheets frequently have multiple tabs, macros and may be encrypted. Therefore the conversion to from XLS to CSV is lossy and problematic. This can be seen in the large number of .CSV files with small sizes (~4kb) after conversion.
