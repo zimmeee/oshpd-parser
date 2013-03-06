@@ -10,9 +10,9 @@ There are 3 main challenges:
 1. The column names are not standardized. For example:
 
 	``['CDM', 'CHARGE DESCRIPTION', '  PRIOR PRICE', 'CUR PRICE']``
-``['Charge#', 'Charge Description', 'HCPCS Code', 'June 2008 Price']``
-['CHARGE CODE', 'DESCRIPTION', 'CHARGE AMOUNT']
-['Procedure #', 'Description', 'Charge']
+	``['Charge#', 'Charge Description', 'HCPCS Code', 'June 2008 Price']``
+	``['CHARGE CODE', 'DESCRIPTION', 'CHARGE AMOUNT']``
+	``['Procedure #', 'Description', 'Charge']``
 
 2. The Excel spreadsheets frequently have multiple tabs, macros and may be encrypted. Therefore the conversion to from XLS to CSV is lossy and problematic. This can be seen in the large number of .CSV files with small sizes (~4kb) after conversion.
 
