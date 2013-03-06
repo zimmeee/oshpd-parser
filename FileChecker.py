@@ -1,6 +1,5 @@
-import os
-import re  
-
+# Filters out the CDM files from the full set of downloaded files
+# 
 # To run: Change path_to_dir to the directory containing all of the OHSPD
 # XLS and XLSX files then:
 #		python FileChecker.py
@@ -16,6 +15,9 @@ import re
 # Upper bound on the number of matching records: 479 * 8 = 3832
 # Actual number of matching records: 3220
 #
+
+import os
+import re  
 
 path_to_dir = '/Users/zimmen/Documents/Projects/Healthcare/ChargeMaster/data'
 
