@@ -18,10 +18,11 @@ There are 3 main challenges:
 
 3. The files frequently have CSV formats that are formatted for human consumption, and contain sub-lists and sub-headers. For instance line 5 below represents a grouping which can be ignored for our purposes
 
-    ``1: Evaluation & Management Services	2010 CPT Code	Outpatient Charge Amount``
-    ``2: Emergency Room Visit, Level 2 	99282	806.00``
-    ``3: Emergency Room Visit, Level 3 	99283	1,342.00``
-    ``4: Emergency Room Visit, Level 4 	99284	2,056.00``
-    ``5: Laboratory & Pathology Services``	
-    ``6: Basic Metabolic Panel	80048	178.00``
-    ``7: Comprehensive Metabolic Panel	80053	221.00``
+    ```1: Evaluation & Management Services	2010 CPT Code	Outpatient Charge Amount
+    2: Emergency Room Visit, Level 2 	99282	806.00
+    3: Emergency Room Visit, Level 3 	99283	1,342.00
+    4: Emergency Room Visit, Level 4 	99284	2,056.00
+    5: Laboratory & Pathology Services	
+    6: Basic Metabolic Panel	80048	178.00
+    7: Comprehensive Metabolic Panel	80053	221.00
+    ```
