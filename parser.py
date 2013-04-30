@@ -2,6 +2,7 @@ import sys
 
 
 
+
 ##should only accept as headers the ones that are 100% text
 
 #have to deal with all these events for charge errors because it's not counting the commas and allowign non-price columns to dominate

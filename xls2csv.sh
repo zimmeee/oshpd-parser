@@ -15,5 +15,5 @@ done
 
 # Convert the xls[x]? files to csv
 for f in $1*.XLS $1*.XLSX; do
-  	python xls2csv.py -i "$f" -o "${f%.*}.CSV" -p '**' 
+  	python xls2csv.py -i "$f" -o "${f%.*}.CSV" -p '%*%*%*%%' 
 done

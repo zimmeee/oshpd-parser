@@ -19,7 +19,7 @@
 import os
 import re  
 
-path_to_dir = '/Users/zimmen/Documents/Projects/Healthcare/ChargeMaster/data'
+path_to_dir = '/Users/aernis/Documents/ChargeMaster/originalXls'
 
 p = re.compile('(\d+)+[_|-]cdm[_|-]?(all)?_(\d{4})', re.IGNORECASE)
 
@@ -31,6 +31,8 @@ for f in files_in_dir:
 	if m:
 		src  = path_to_dir + os.sep + f
 		dest = path_to_dir + os.sep + 'CDM' + os.sep + f
+		print src
+		print dest
 		os.rename( src, dest )
 		print f
 		counter = counter + 1
