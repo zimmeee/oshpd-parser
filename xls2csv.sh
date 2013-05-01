@@ -1,6 +1,6 @@
 # Converts all the file names to uppercase
 # Then converts all the XLS and XLSX files to CSV
-# Usage: ./xls2csv.py <dir>
+# Usage: ./xls2csv.sh <dir>
 
 if test "$1" == "" ; then
 	echo $'\a'You forgot to specify the directory with the xls files to be converted
