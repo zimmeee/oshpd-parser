@@ -35,12 +35,23 @@ f=open(sys.argv[1],'r')
 d=f.readlines()
 f.close()
 
+# If an output file is supplied, write headers to it
+write2File = False
+
+try:
+    headerDumpFile = sys.argv[2]
+    write2File = True
+except:
+    print 'No output file specified - not writing to disk'
+
+    
+
+
 ##first we want to identify what the real regions are where the data is icnluded
 
 lengths=[]
 
 numCols = [0,0,0,0,0,0,0]
-
 
 #first identify the normal number of fields to have
 for i in range(len(d)):
@@ -122,8 +133,18 @@ probLine=0
 for i in failLines:
     print 'MAYBEHEADERS:\t',sys.argv[1],d[i].rstrip()
 
-    v=d[i].rstrip().split("%*%*%*%%")
-    countOff=0
+    v = d[i].rstrip().split("%*%*%*%%")
+
+    if( write2File ):
+        with open(headerDumpFile, "a") as myfile:
+            # get rid of the empties
+            v = filter(None, v)
+            # remove white space
+            v = [x.strip().upper() for x in v]
+            myfile.write( ','.join( v ) + '\n' )
+            myfile.close()
+
+    countOff = 0
     for j in checkNumeric:
         try:
             temp = float(v[j].replace(",",""))
