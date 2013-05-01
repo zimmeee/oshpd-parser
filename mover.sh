@@ -62,3 +62,17 @@ good notes test file
 
 good multiple test file
 106382715_CDM_2007
+
+
+notesdir=/Users/aernis/Documents/Projects/ChargeMaster/StrataRXcsv/notesFiles/
+cleannotesdir=/Users/aernis/Documents/Projects/ChargeMaster/StrataRXcsv/notesFiles/cleanNotes/
+for file in *
+ do ls $file;
+ python /Users/aernis/Documents/Projects/ChargeMaster/code/github/oshpd-parser/parser.py $file
+ echo 'now clean? y '
+ read a;
+ if [[ $a == "y" ]]; then
+     echo 'mv $file ${cleannotesdir}${file}'
+     mv $file ${cleannotesdir}${file}
+  fi
+done;
