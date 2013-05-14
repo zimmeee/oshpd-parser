@@ -6,10 +6,16 @@ import sys
 def main(argList):
     
   # If an output file is supplied, write headers to it
+  fileList = []
+  if argList[0] == '-f': #doing a single file only
+    argList.pop(0)
+    fileList = [argList[0]]
+  else:
+    f=open(argList[0],'r')
+    fileList = [d.rstrip() for d in f.readlines()]
+    f.close()
+
   write2File = False
-  f=open(argList[0],'r')
-  fileList = [d.rstrip() for d in f.readlines()]
-  f.close()
 
   print fileList
 
@@ -189,7 +195,7 @@ def main(argList):
      totalLen=len(d)
      print len(trueHeader),len(realLines),needsWork, 1.*(totalLen-needsWork)/totalLen
 
-  if write2file:
+  if write2File:
       myfile.close()
 
 

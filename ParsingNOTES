@@ -1,0 +1,9 @@
+run parser either with a single file by running
+parser.py -f <filename>
+or run it with a list of files
+parser.py <file containing list of filenames>
+
+running mover.sh
+Completed sets:
+cleanFiles
+notesFiles/cleanNotes
